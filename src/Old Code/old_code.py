@@ -68,3 +68,59 @@ def get_filtered_image(event_data, t_end,
     
     return grid_vox
 
+Don't show matplotlib figures
+
+t_start_range = np.linspace(0, 5.7, 57+1)
+# t_start_range = np.arange(0, 5.7, t_diff)
+
+# event_subsets = list()
+# t_end_range = t_start_range + time_interval
+
+# for i in range(len(t_start_range)):
+    # t_start = t_start_range[i]
+    # event_subset, t_end, start_ind, stop_ind = \
+        # util.get_event_subset(event_list, t_start, t_diff=t_diff, distribute_to_interval=True)
+    # event_subsets.append(event_subset)
+    
+# filter_amount = 4
+
+# spatial_even_filters, spatial_odd_filters = generate_spatial_filters(
+                            # filter_amount, filter_apothem, 
+                            # default_filter_apothem, spatial_sigma, 
+                            # f0x, f0x)
+
+# for i in range(len(t_start_range)):
+    # event_subset = event_subsets[i]
+    # t_end = t_end_range[i]
+    # filtered_image = get_filtered_image(event_subset, t_end,
+                                # 0, 0, sensor_width, sensor_height,
+                                # filter_amount, temporal_mono_filter, 
+                                # temporal_bi1_filter, temporal_bi2_filter,
+                                # scale_bi1, scale_bi2,
+                                # spatial_even_filters, spatial_odd_filters)
+    # u, v = filter_vectors(filtered_image, filter_amount)
+    # quiver_show_subset(u, v, 0, sensor_width, 0, sensor_height)
+    # file_name = "{:.2f}_to_{:.2f}.png".format(t_start_range[i], t_end_range[i])
+    # plt.savefig(os.path.join(output_dir, "filters_4", file_name))
+    # plt.close()
+
+# filter_amount = 32
+# spatial_even_filters, spatial_odd_filters = generate_spatial_filters(
+                            # filter_amount, filter_apothem, 
+                            # default_filter_apothem, spatial_sigma, 
+                            # f0x, f0x)
+
+# for i in range(len(t_start_range)):
+    # event_subset = event_subsets[i]
+    # t_end = t_end_range[i]
+    # filtered_image = get_filtered_image(event_subset, t_end,
+                                # 0, 0, sensor_width, sensor_height,
+                                # filter_amount, temporal_mono_filter, 
+                                # temporal_bi1_filter, temporal_bi2_filter,
+                                # scale_bi1, scale_bi2,
+                                # spatial_even_filters, spatial_odd_filters)
+    # u, v = filter_vectors(filtered_image, filter_amount)
+    # quiver_show_subset(u, v, 0, sensor_width, 0, sensor_height)
+    # file_name = "{:.2f}_to_{:.2f}.png".format(t_start_range[i], t_end_range[i])
+    # plt.savefig(os.path.join(output_dir, "filters_32", file_name))
+    # plt.close()
