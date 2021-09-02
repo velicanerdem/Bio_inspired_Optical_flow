@@ -18,8 +18,9 @@ def get_event_subset(event_data, t_start, t_diff=0.7, interval=0.7, distribute_t
     if distribute_to_interval:
         event_subset = np.copy(event_subset)
         event_subset['t'] = t_start + (event_subset['t'] - t_start) * interval / t_diff
+        t_end = t_start + interval
         
-    return event_subset, start_ind, stop_ind
+    return event_subset, start_ind, stop_ind, t_end
 
 def get_event_indices(event_data, t_start, t_amount, t_iter, t_diff=0.7, interval=0.7, distribute_to_interval=False):
     t_start_range = t_start + np.arange(t_amount) * t_iter

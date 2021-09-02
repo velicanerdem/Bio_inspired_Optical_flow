@@ -124,3 +124,43 @@ t_start_range = np.linspace(0, 5.7, 57+1)
     # file_name = "{:.2f}_to_{:.2f}.png".format(t_start_range[i], t_end_range[i])
     # plt.savefig(os.path.join(output_dir, "filters_32", file_name))
     # plt.close()
+    
+# def get_filtered_image_odd_even(event_subset, t_end,
+                        # start_x_img, start_y_img, stop_x_img, stop_y_img, 
+                        # filter_amount, temporal_mono_filter, 
+                        # temporal_bi1_filter, temporal_bi2_filter,
+                        # scale_biphasic1, scale_biphasic2,
+                        # spatial_even_filters, spatial_odd_filters,
+                        # is_odd
+                      # ):
+       
+    # pixels_x = stop_x_img - start_x_img
+    # pixels_y = stop_y_img - start_y_img
+    
+    # stop_index = len(event_subset)
+    # # order is reversed for sensor_height - width for x, y indexing as in a picture
+    # image_phasic = np.zeros((pixels_y, pixels_x), dtype=np.float64)
+    
+    # for index in np.arange(0, stop_index):
+        # t, x, y = event_subset[index]
+
+        Compute temporal filter
+
+        # t_diff = t_end - t
+
+        # if is_odd:
+            # image_phasic[y, x] += scale_biphasic1 * temporal_bi1_filter.get(t_diff) + \
+                # scale_biphasic2 * temporal_bi2_filter.get(t_diff)
+        # else:
+            # image_phasic[y, x] += temporal_mono_filter.get(t_diff)
+    
+    
+    # filtered_image = np.zeros((filter_amount, pixels_y, pixels_x), dtype=np.float64)
+
+    # for i in range(filter_amount):
+        # if is_odd:
+            # filtered_image[i] += cv2.filter2D(image_phasic, -1, spatial_odd_filters[i], borderType=cv2.BORDER_CONSTANT)        
+        # else:
+            # filtered_image[i] += cv2.filter2D(image_phasic, -1, spatial_even_filters[i], borderType=cv2.BORDER_CONSTANT)
+            
+    # return filtered_image
