@@ -7,6 +7,7 @@ from os.path import join
 import pandas as pd
 import time
 
+# Used for time dilation but not that useful right now as time scaling was added
 def get_event_subset(event_data, t_start, t_diff=0.7, interval=0.7, distribute_to_interval=False):
     
     t_end = t_start + t_diff
@@ -22,6 +23,7 @@ def get_event_subset(event_data, t_start, t_diff=0.7, interval=0.7, distribute_t
         
     return event_subset, start_ind, stop_ind, t_end
 
+# Used for time dilation but not that useful right now as time scaling was added
 def get_event_indices(event_data, t_start, t_amount, t_iter, t_diff=0.7, interval=0.7, distribute_to_interval=False):
     t_start_range = t_start + np.arange(t_amount) * t_iter
     t_end_range = t_start_range + t_diff
